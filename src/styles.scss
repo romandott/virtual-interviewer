@@ -3,3 +3,104 @@
 @tailwind utilities;
 
 /* You can add global styles to this file, and also import other style files */
+
+@layer components {
+  .tw-plain-markup *,
+  *[ng-version] .tw-plain-markup p {
+    @apply tw-font-gregular;
+    @apply tw-leading-20;
+  }
+
+  .tw-plain-new-markup,
+  .tw-plain-new-markup *,
+  *[ng-version] .tw-plain-new-markup p {
+    @apply tw-font-gregular;
+    @apply tw-typo-regular;
+  }
+
+  .tw-plain-new-markup,
+  *[ng-version] .tw-plain-new-markup a {
+    @apply tw-typo-regular;
+    @apply tw-text-black-500;
+  }
+
+  .tw-plain-new-markup,
+  *[ng-version] .tw-plain-new-markup ul li,
+  *[ng-version] .tw-plain-new-markup ol li {
+    @apply tw-typo-regular;
+  }
+
+  .tw-plain-markup b,
+  .tw-plain-markup strong,
+  .tw-plain-markup b *,
+  .tw-plain-markup strong *,
+  .tw-plain-markup [style*='font-weight: bold'],
+  .tw-plain-markup [style*='font-weight: 700'],
+  .tw-plain-markup [style*='font-weight:bold'],
+  .tw-plain-markup [style*='font-weight:700'],
+  .tw-plain-markup p[style*='font-weight: bold'],
+  .tw-plain-markup p[style*='font-weight: 700'],
+  .tw-plain-markup p[style*='font-weight:bold'],
+  .tw-plain-markup p[style*='font-weight:700'] {
+    @apply tw-font-bold;
+    @apply tw-font-gbold;
+  }
+
+  .tw-plain-markup ul,
+  .tw-plain-markup ol {
+    @apply tw-m-0;
+    @apply tw-p-0;
+    @apply tw-mt-10;
+    @apply tw-list-none;
+  }
+
+  .tw-plain-markup li {
+    @apply tw-relative;
+    @apply tw-p-0;
+
+    list-style-position: inside;
+  }
+
+  .tw-plain-markup ul li {
+    padding-left: 30px;
+  }
+
+  .tw-plain-markup ol li {
+    list-style-type: decimal;
+  }
+
+  .tw-plain-markup ol li::before {
+    content: '';
+    padding-right: 12px;
+  }
+
+  .tw-plain-markup ul li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    @apply tw-bg-black-700;
+    @apply tw-absolute;
+
+    top: 6px;
+    left: 6px;
+    transform: rotate(45deg);
+  }
+
+  .tw-plain-markup ul li p,
+  .tw-plain-markup ol li p {
+    display: inline;
+  }
+
+  .tw-plain-new-markup ul li::before {
+    top: 10px;
+  }
+
+  .tw-plain-markup p:not(:first-child) {
+    @apply tw-mt-20;
+  }
+
+  .tw-plain-markup *:first-child {
+    @apply tw-mt-0;
+  }
+
+}
