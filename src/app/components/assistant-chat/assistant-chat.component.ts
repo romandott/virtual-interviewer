@@ -45,7 +45,6 @@ export class AssistantChatComponent implements OnInit {
         const { message } = this.chatFormGroup.value;
 
         if (this.chatFormGroup.valid && typeof message === 'string') {
-            console.log(message)
             this.virtualInterviewChatService.sendMessage(message);
             this.chatFormGroup.reset();
         }
