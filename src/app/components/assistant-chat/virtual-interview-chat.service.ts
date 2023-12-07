@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 export interface VirtualInterviewMessage {
-    readonly author: 'assistant' | 'user' | 'virtual-interviewer'
+    readonly sender: 'assistant' | 'user' | 'virtual-interviewer'
     readonly text: string;
 }
 
@@ -33,7 +33,7 @@ export class VirtualInterviewChatService {
     private sendWelcomeMessage(): void {
         this.chat$.next({
             messages: [{
-                author: 'assistant',
+                sender: 'assistant',
                 text: 'Welcome to the virtual interview!'
             }]
         })

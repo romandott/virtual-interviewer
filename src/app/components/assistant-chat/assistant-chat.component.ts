@@ -1,14 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import { ChatMessageComponent } from './chat-message.component';
-import { ChatMessageTextComponent } from './chat-message-text.component';
 import { VirtualInterviewChatService } from './virtual-interview-chat.service';
 
 @Component({
   selector: 'virtual-interviewer-assistant-chat',
   standalone: true,
-  imports: [CommonModule, ChatMessageComponent, ChatMessageTextComponent, HttpClientModule],
+  imports: [CommonModule],
   templateUrl: './assistant-chat.component.html',
   styleUrl: './assistant-chat.component.scss',
 })
