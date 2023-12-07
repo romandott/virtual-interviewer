@@ -1,5 +1,5 @@
 :host {
-  @apply tw-flex tw-flex-col tw-h-[600px] tw-w-[500px] tw-bg-white tw-border-0 tw-border-solid tw-rounded-5 tw-shadow-2xl tw-overflow-visible;
+  @apply tw-flex tw-flex-col tw-h-[600px] tw-w-[500px] tw-bg-white tw-border-0 tw-border-solid tw-rounded-5 tw-shadow-2xl tw-relative tw-overflow-visible;
 
   @apply tw-bg-[url('/assets/icons/background.svg')] tw-bg-cover tw-bg-center;
 }
