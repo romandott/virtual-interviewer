@@ -1,6 +1,7 @@
 import { Route } from '@angular/router';
 import { VacancyComponent } from './components/vacancy';
 import { ChatboxComponent } from './components/chatbox';
+import { AssistantChatComponent } from './components/assistant-chat';
 
 export const appRoutes: Route[] = [
     {
@@ -12,8 +13,14 @@ export const appRoutes: Route[] = [
         outlet: 'popup',
         children: [
             {
-                path: ':id',
-                component: ChatboxComponent
+                path: '',
+                component: ChatboxComponent,
+                children: [
+                    {
+                        path: ':id',
+                        component: AssistantChatComponent
+                    }
+                ]
             }
         ]
     }

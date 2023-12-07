@@ -1,0 +1,22 @@
+<div class="tw-flex tw-flex-col tw-flex-grow">
+    <ng-container *ngIf="chat$ | async as chat">
+        <virtual-interviewer-chat-message *ngFor="let message of chat.messages">
+            <figure class="tw-p-20">
+                <img src="asseets/icons/assistant.svg" alt="" class="tw-h-20 tw-w-20">
+            </figure>
+            <virtual-interviewer-chat-message-text>
+                {{ message.text }}
+            </virtual-interviewer-chat-message-text>
+        </virtual-interviewer-chat-message>
+    </ng-container>
+</div>
+
+<div>
+    <form class="">
+        <fieldset>
+            <legend>Send a message</legend>
+            <input type="text" placeholder="Type a message" />
+            <button type="submit">Send</button>
+        </fieldset>
+    </form>
+</div>
