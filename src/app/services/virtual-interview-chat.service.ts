@@ -86,7 +86,6 @@ export class VirtualInterviewChatService {
         const messages$ = defer(() => this.socket.on<SocketMessage>('message'))
         return messages$.pipe(
             map(([message]) => {
-                this.interviewId = message.interviewId
                 return {sender: 'virtual-interviewer', text: message.message} as VirtualInterviewMessage
             }),
             tap(message => {
