@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
     standalone: true,
-    imports: [NxWelcomeComponent, RouterModule],
+    imports: [RouterModule],
     selector: 'virtual-interviewer-root',
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
 })
 export class AppComponent {
-    title = 'virtual-interviewer';
+    public readonly title = 'Virtual interview assistant';
 }

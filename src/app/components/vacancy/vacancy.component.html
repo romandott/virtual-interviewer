@@ -1,0 +1,3 @@
+<ng-container *ngIf="vacancy$ | async as vacancy">
+    <iframe class="tw-w-full tw-h-full" [srcdoc]="vacancy.description | safeHtml"></iframe>
+</ng-container>
