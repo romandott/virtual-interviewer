@@ -2,7 +2,10 @@
   "name": "@virtual-interviewer/source",
   "version": "0.0.0",
   "license": "MIT",
+  "homepage": "http://romandott.github.io/virtual-interviewer",
   "scripts": {
+    "predeploy": "npm run build -- --prod --baseHref=/virtual-interviewer/",
+    "deploy": "gh-pages -d dist/apps/virtual-interviewer/browser",
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test"
