@@ -27,10 +27,10 @@ export class VirtualInterviewChatService {
     }
 
     public getAssistantHelp(): void {
-        this.sentWelcomeMessage();
+        this.sendWelcomeMessage();
     }
 
-    private sentWelcomeMessage(): void {
+    private sendWelcomeMessage(): void {
         this.chat$.next({
             messages: [{
                 author: 'assistant',
