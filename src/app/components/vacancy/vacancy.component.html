@@ -5,6 +5,7 @@
             <a
                     class="tw-border-2 tw-rounded-5 tw-border-solid tw-border-green-600 tw-w-full tw-text-green-600 hover:tw-border-green-700 hover:tw-text-green-700 tw-px-20 tw-flex tw-items-center tw-h-40 tw-gap-10"
                     [routerLink]="[{ outlets: { popup: ['chatbox', vacancy.id] } }]"
+                    [routerLinkActive]="['tw-pointer-events-none', 'tw-opacity-50', 'tw-cursor-not-allowed']"
             >
                 <figure>
                     <img [src]="'assets/icons/assistant.svg'" class="tw-w-20 tw-h-20" alt="">

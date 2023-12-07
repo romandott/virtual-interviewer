@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { map, Observable, share } from 'rxjs';
 import { SafeHtmlPipe } from '../../pipes/safeHtml';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 export interface Vacancy {
   readonly description: string;
@@ -14,7 +14,7 @@ export interface Vacancy {
 @Component({
   selector: 'virtual-interviewer-vacancy',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, SafeHtmlPipe, RouterLink],
+  imports: [CommonModule, HttpClientModule, SafeHtmlPipe, RouterLink, RouterLinkActive],
   templateUrl: './vacancy.component.html',
   styleUrl: './vacancy.component.scss',
 })
