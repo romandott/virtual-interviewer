@@ -1,5 +1,5 @@
 <ng-container *ngIf="vacancy$ | async as vacancy">
-    <h1 class="tw-typo-h1">{{ vacancy.title }}</h1>
+    <h1 class="tw-typo-h1 tw-mb-20">{{ vacancy.title }}</h1>
     <div class="tw-plain-markup tw-plain-new-markup tw-text-black-700 tw-break-words">
         <div [innerHTML]="vacancy.description | safeHtml"></div>
     </div>
