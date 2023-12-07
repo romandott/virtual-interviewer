@@ -1,1 +1,15 @@
-<p>chatbox works!</p>
+<div class="tw-flex tw-flex-col tw-flex-grow tw-relative tw-overflow-visible">
+    <a
+            [routerLink]="['../']"
+            [relativeTo]="route.parent"
+            class="tw-absolute -tw-right-10 -tw-top-10"
+    >
+        <figure class="tw-border-0 tw-rounded-full tw-bg-black-800">
+            <img [src]="'assets/icons/close.svg'" alt="Close" class="tw-w-20 tw-h-20">
+        </figure>
+    </a>
+
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
