@@ -2,12 +2,15 @@
     <header class="tw-flex tw-justify-between">
         <h1 class="tw-typo-h1 tw-mb-20">{{ vacancy.title }}</h1>
         <div>
-            <button class="tw-border-2 tw-rounded-5 tw-border-solid tw-border-green-600 tw-w-full tw-text-green-600 hover:tw-border-green-700 hover:tw-text-green-700 tw-px-20 tw-flex tw-items-center tw-h-40 tw-gap-10">
+            <a
+                    class="tw-border-2 tw-rounded-5 tw-border-solid tw-border-green-600 tw-w-full tw-text-green-600 hover:tw-border-green-700 hover:tw-text-green-700 tw-px-20 tw-flex tw-items-center tw-h-40 tw-gap-10"
+                    [routerLink]="[{ outlets: { popup: ['chatbox', vacancy.id] } }]"
+            >
                 <figure>
-                    <img src="/assets/icons/assistant.svg" class="tw-w-20 tw-h-20" alt="">
+                    <img [src]="'assets/icons/assistant.svg'" class="tw-w-20 tw-h-20" alt="">
                 </figure>
                 <span class="tw-typo-regular-bold tw-leading-40">Take a virtual interview</span>
-            </button>
+            </a>
         </div>
     </header>
     <div class="tw-plain-markup tw-plain-new-markup tw-text-black-700 tw-break-words">
